@@ -1,0 +1,17 @@
+﻿@model SVDWebsite.Models.BrowseIndexModel
+@{
+    ViewBag.Title = "Browse";
+}
+<h1><span class="faint">Browse:</span> Vehicles</h1>
+<div class="box mt10 pb10">
+    <h3 class="mt10">Browse by vehicle type:</h3>
+    <div class="light mb10 mt5 indent">
+        <i>More coming soon!</i>
+    </div>
+    <ul class="mb10">
+        @foreach (var vt in Model.VehicleTypes)
+        {
+            <li><a href="/browse/@vt.Name.ToLower()s">@vt.Name<text>s</text></a></li>
+        }
+    </ul>
+</div>

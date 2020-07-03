@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vdws.mediapanther.com/VdService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" />
+  <xs:import schemaLocation="http://vdws.mediapanther.com/VdService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfVehicleType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VehicleType" nillable="true" type="tns:VehicleType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehicleType" nillable="true" type="tns:ArrayOfVehicleType" />
+  <xs:complexType name="VehicleType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:VdBase">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ApprovalStatus" type="q1:ApprovalStatus" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleType" nillable="true" type="tns:VehicleType" />
+  <xs:complexType name="VdBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsPersisted" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VdBase" nillable="true" type="tns:VdBase" />
+  <xs:complexType name="ArrayOfVehicleManufacturer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VehicleManufacturer" nillable="true" type="tns:VehicleManufacturer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehicleManufacturer" nillable="true" type="tns:ArrayOfVehicleManufacturer" />
+  <xs:complexType name="VehicleManufacturer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:VdBase">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ApprovalStatus" type="q2:ApprovalStatus" />
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Models" nillable="true" type="q3:ArrayOfint" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Types" nillable="true" type="tns:ArrayOfVehicleType" />
+          <xs:element minOccurs="0" name="WikipediaId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleManufacturer" nillable="true" type="tns:VehicleManufacturer" />
+  <xs:complexType name="VehicleModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:VdBase">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ApprovalStatus" type="q4:ApprovalStatus" />
+          <xs:element minOccurs="0" name="EngineSizeCc" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ManufacturerId" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="tns:VehicleType" />
+          <xs:element minOccurs="0" name="VariantName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WikipediaId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="YearIntroduced" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="YearStopped" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleModel" nillable="true" type="tns:VehicleModel" />
+  <xs:complexType name="ArrayOfVehicleModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VehicleModel" nillable="true" type="tns:VehicleModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehicleModel" nillable="true" type="tns:ArrayOfVehicleModel" />
+  <xs:complexType name="Client">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:VdBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CallbackUrl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Client" nillable="true" type="tns:Client" />
+</xs:schema>

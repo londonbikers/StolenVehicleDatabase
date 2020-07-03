@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="VdService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://vdws.mediapanther.com/VdService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://vdws.mediapanther.com/VdService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vdws.mediapanther.com/VdService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Responses" />
+      <xsd:import schemaLocation="http://vdws.mediapanther.com/VdService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Models" />
+      <xsd:import schemaLocation="http://vdws.mediapanther.com/VdService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" />
+      <xsd:import schemaLocation="http://vdws.mediapanther.com/VdService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVdService_GetVehicleTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleTypes" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_GetVehicleTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_GetVehicleManufacturers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleManufacturers" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_GetVehicleManufacturers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleManufacturersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_GetVehicleManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_GetVehicleManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_GetVehicleModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleModel" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_GetVehicleModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_GetVehicleModelsByManufacturerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleModelsByManufacturerId" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_GetVehicleModelsByManufacturerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleModelsByManufacturerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_GetVehicleModelsByManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleModelsByManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_GetVehicleModelsByManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleModelsByManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_UpdateVehicleType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleType" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_UpdateVehicleType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_UpdateVehicleManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_UpdateVehicleManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_UpdateVehicleModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleModel" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_UpdateVehicleModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_UpdateClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClient" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_UpdateClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_DeleteVehicleType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVehicleType" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_DeleteVehicleType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVehicleTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_DeleteVehicleManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVehicleManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_DeleteVehicleManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVehicleManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_DeleteVehicleModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVehicleModel" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_DeleteVehicleModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVehicleModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_DeleteClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClient" />
+  </wsdl:message>
+  <wsdl:message name="IVdService_DeleteClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClientResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IVdService">
+    <wsdl:operation name="GetVehicleTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/GetVehicleTypes" message="tns:IVdService_GetVehicleTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/GetVehicleTypesResponse" message="tns:IVdService_GetVehicleTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleManufacturers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/GetVehicleManufacturers" message="tns:IVdService_GetVehicleManufacturers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/GetVehicleManufacturersResponse" message="tns:IVdService_GetVehicleManufacturers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/GetVehicleManufacturer" message="tns:IVdService_GetVehicleManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/GetVehicleManufacturerResponse" message="tns:IVdService_GetVehicleManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/GetVehicleModel" message="tns:IVdService_GetVehicleModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/GetVehicleModelResponse" message="tns:IVdService_GetVehicleModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleModelsByManufacturerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/GetVehicleModelsByManufacturerId" message="tns:IVdService_GetVehicleModelsByManufacturerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/GetVehicleModelsByManufacturerIdResponse" message="tns:IVdService_GetVehicleModelsByManufacturerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleModelsByManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/GetVehicleModelsByManufacturer" message="tns:IVdService_GetVehicleModelsByManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/GetVehicleModelsByManufacturerResponse" message="tns:IVdService_GetVehicleModelsByManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/UpdateVehicleType" message="tns:IVdService_UpdateVehicleType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/UpdateVehicleTypeResponse" message="tns:IVdService_UpdateVehicleType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/UpdateVehicleManufacturer" message="tns:IVdService_UpdateVehicleManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/UpdateVehicleManufacturerResponse" message="tns:IVdService_UpdateVehicleManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/UpdateVehicleModel" message="tns:IVdService_UpdateVehicleModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/UpdateVehicleModelResponse" message="tns:IVdService_UpdateVehicleModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/UpdateClient" message="tns:IVdService_UpdateClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/UpdateClientResponse" message="tns:IVdService_UpdateClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVehicleType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/DeleteVehicleType" message="tns:IVdService_DeleteVehicleType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/DeleteVehicleTypeResponse" message="tns:IVdService_DeleteVehicleType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVehicleManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/DeleteVehicleManufacturer" message="tns:IVdService_DeleteVehicleManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/DeleteVehicleManufacturerResponse" message="tns:IVdService_DeleteVehicleManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVehicleModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/DeleteVehicleModel" message="tns:IVdService_DeleteVehicleModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/DeleteVehicleModelResponse" message="tns:IVdService_DeleteVehicleModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVdService/DeleteClient" message="tns:IVdService_DeleteClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVdService/DeleteClientResponse" message="tns:IVdService_DeleteClient_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Default" type="tns:IVdService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetVehicleTypes">
+      <soap:operation soapAction="http://tempuri.org/IVdService/GetVehicleTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleManufacturers">
+      <soap:operation soapAction="http://tempuri.org/IVdService/GetVehicleManufacturers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IVdService/GetVehicleManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleModel">
+      <soap:operation soapAction="http://tempuri.org/IVdService/GetVehicleModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleModelsByManufacturerId">
+      <soap:operation soapAction="http://tempuri.org/IVdService/GetVehicleModelsByManufacturerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleModelsByManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IVdService/GetVehicleModelsByManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleType">
+      <soap:operation soapAction="http://tempuri.org/IVdService/UpdateVehicleType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IVdService/UpdateVehicleManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleModel">
+      <soap:operation soapAction="http://tempuri.org/IVdService/UpdateVehicleModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClient">
+      <soap:operation soapAction="http://tempuri.org/IVdService/UpdateClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVehicleType">
+      <soap:operation soapAction="http://tempuri.org/IVdService/DeleteVehicleType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVehicleManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IVdService/DeleteVehicleManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVehicleModel">
+      <soap:operation soapAction="http://tempuri.org/IVdService/DeleteVehicleModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClient">
+      <soap:operation soapAction="http://tempuri.org/IVdService/DeleteClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VdService">
+    <wsdl:port name="Default" binding="tns:Default">
+      <soap:address location="http://vdws.mediapanther.com/vdservice.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

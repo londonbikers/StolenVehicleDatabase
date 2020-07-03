@@ -1,0 +1,8 @@
+﻿<li>
+@if(Request.IsAuthenticated) {
+    @Html.ActionLink("Log-off", "logoff", "account")
+}
+else {
+    @Html.ActionLink("Log-on", "logon", "account")
+}
+</li>

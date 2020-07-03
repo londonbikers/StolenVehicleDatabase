@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ApprovalStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Approved" />
+      <xs:enumeration value="Suggested" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ApprovalStatus" nillable="true" type="tns:ApprovalStatus" />
+  <xs:simpleType name="GetOperationResultType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="FailureEntityDoesntExist" />
+      <xs:enumeration value="FailureApplicationFault" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GetOperationResultType" nillable="true" type="tns:GetOperationResultType" />
+  <xs:simpleType name="UpdateOperationResultType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="FailureEntityAlreadyExists" />
+      <xs:enumeration value="FailureEntityIsInvalid" />
+      <xs:enumeration value="FailureApplicationFault" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UpdateOperationResultType" nillable="true" type="tns:UpdateOperationResultType" />
+  <xs:simpleType name="DeleteOperationResultType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="FailureEntityDoesntExist" />
+      <xs:enumeration value="FailureEntityHasDependencies" />
+      <xs:enumeration value="FailureApplicationFault" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DeleteOperationResultType" nillable="true" type="tns:DeleteOperationResultType" />
+</xs:schema>

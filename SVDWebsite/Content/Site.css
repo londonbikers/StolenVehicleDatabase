@@ -1,0 +1,334 @@
+﻿/*
+----------------------------------------------------------*/
+html { height:100%; }
+body {
+    background:#000;
+    font-size:0.75em;
+    font-family: Verdana, Arial, sans-serif;
+    margin:0;
+    padding:0;
+    color:#9c9c9c; 
+    line-height: 17px;
+}
+
+/* blues */
+a:link {color:#1e96ce; text-decoration:none;}
+a:visited {color:#1e96ce; text-decoration:none;}
+a:hover {text-decoration:none; color: #f8b902;}
+a:active {color:#1e96ce; text-decoration:none;}
+
+p { line-height: 20px; }
+ol, ul { margin-bottom: -10px; }
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {font-size:1.7em;color:#9c9c9c; font-family: Arial;}
+h1 {font-weight: normal; }
+h1 {font-size:2em;padding-bottom:0;margin-bottom:20px; margin-top: 0px; padding-top: 0px;}
+h2 {padding:0px;}
+h3 {font-size:1.2em; margin: 0px;}
+h4 {font-size:1.1em;}
+h5, h6 {font-size:1em;}
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 {margin-top:0;}
+
+.block1 {
+    color: #fff;
+    background-color: #000;
+    padding: 3px 6px 3px 6px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+#logo { position: absolute; top: 7px; left: 40px; }
+#header { margin-top: 20px; }
+#topHead {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #232323;
+    background-color: #07070b;
+    background-image: url(http://mpncdn.eu/svd/c/images/head-bg.gif);
+    background-repeat: repeat-x;
+    height: 44px;
+}
+#menucontainer { 
+    float: right; 
+    font-family: Arial;
+    margin-right: 40px; 
+    padding-top: 6px;
+}
+#bottomHead {
+    height: 21px;
+    background-color: #141417;
+    border-bottom: 1px solid #333;
+    text-align: right;
+    padding-right: 40px;
+    font-size: 0.85em;
+    color: #5b5b5b;
+    text-transform: uppercase;
+}
+#bottomHead div {
+    position: relative;
+    top: 2px;
+}
+#master { padding: 10px 40px 0px 40px; }
+#main {
+    padding:20px 0px 20px 0px;
+    margin-bottom:30px;
+    _height:1px;
+     clear:both;
+    position:relative;
+}
+#footer {color:#999;padding:30px 0;text-align:center;font-size:.9em;}
+.content {
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #282b33;
+}
+
+/* LAYOUT BLOCKS
+----------------------------------------------------------*/
+.box {
+     background-color: #07070b; 
+     padding: 10px;
+     border: 1px solid #333;
+}
+.contentBox {
+     background-color: #07070b; 
+     padding: 10px;
+     border: 1px solid #333;
+}
+.contentBoxBottom {
+     padding: 10px;
+     background-color: #131313;
+     border-left: 1px solid #333;
+     border-right: 1px solid #333;
+     border-bottom: 1px solid #333;
+}
+.clearBox {
+     padding: 10px;
+     border: 1px solid #333;
+}
+.clearBoxBottom {
+     padding: 10px;
+     border-left: 1px solid #d7d4cc;
+     border-right: 1px solid #d7d4cc;
+     border-bottom: 1px solid #d7d4cc;
+}
+.clearBoxTop {
+     padding: 10px;
+     border-left: 1px solid #333;
+     border-right: 1px solid #333;
+     border-top: 1px solid #333;
+}
+.fieldBox {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #f4f5f6;
+}
+.fieldBoxBottom {
+    margin-bottom: 20px;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+    padding: 10px;
+}
+.notification {
+	padding: 10px;
+	color: #6e5200;
+	background-color: #f8b902;
+	border: 1px solid #000;
+	line-height: 23px;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 1.2em;
+}
+#message {
+    display: none;
+	padding: 10px;
+	color: #807e1e;
+	background-color: #fffd8b;
+	border: 1px solid #cebb7b;
+	font-weight: bold;
+}
+.highlightBox {
+    padding: 15px;
+    background-color: #07070b;
+    color: #9c9c9c;
+    line-height: 21px;
+    border: 1px solid #333;
+}
+.highlightBox2 {
+    padding: 15px;
+    background-color: #050505;
+    color: #9c9c9c;
+    line-height: 21px;
+    border: 1px solid #333333;
+}
+div.standout1 {
+    padding: 2px 5px 2px 5px;
+    background-color: #218df1;
+    color: #c9e3fc;
+}
+
+div.stat {
+    background-color: #19191c;
+    padding: 10px;
+    min-width: 100px;
+    display: inline-block;
+}
+div.statHead {
+    color: #93918b;
+    text-transform: uppercase;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+div.statContent {
+    color: #48484c;
+    font-family: Arial;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* PANELS
+----------------------------------------------------------*/
+.panel {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #07070b;
+    border: 1px solid #333;
+    font-size: 0.9em;
+}
+.panel img {
+    border: 1px solid #333;
+}
+
+.photo {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #07070b;
+    border: 1px solid #333;
+    font-size: 0.9em;
+}
+.photo img {
+    border: 1px solid #333;
+}
+.frame {
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid #d7d4cc;
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+ul#menu {padding:0;position:relative;margin:0 0 0 15px ;text-align:right;}
+ul#menu li {display:block;list-style:none;float:left;margin:0 2px 0 0;font-size:1.2em; text-transform: uppercase;}
+ul#menu li a {padding:7px 10px;font-weight:bold;text-decoration:none;color:#5b5b5b;display:block;}
+ul#menu li a:hover {text-decoration:none;color:#f8b902;}
+ul#menu li a:active {text-decoration:none;color:#ae0018;}
+ul#menu li.selected {background:#000; border: 1px solid #333;}
+ul#menu li.selected a {color:#fff;}
+
+/* MISC 
+----------------------------------------------------------*/
+ul { margin-bottom: 0px; }
+.spaced li { margin-bottom: 20px; }
+hr { display:block; height:1px; border:0; border-top:1px solid #333; margin:1em 0; padding:0; }
+hr.light { border-top:1px solid #111111; }
+.clear {clear:both;}
+.error {color:Red;}
+.nowrap { white-space: nowrap; }
+.floatLeft {float: left !important;}
+.floatRight {float: right !important;}
+img { border: 0px; vertical-align: middle; }
+#logindisplay a:link, #logindisplay a:visited {color:#fff;text-decoration:underline;}
+#logindisplay a:hover {color:#034af3;text-decoration:underline;}
+.field-validation-error {color:#ff0000;}
+.input-validation-error {border:1px solid #ff0000;background-color:#ffeeee;}
+.validation-summary-errors {
+    font-weight:bold;
+    color:#ff0000; 
+    margin-top: 20px; 
+    background-color: #ffdbdb; 
+    padding: 10px;
+    border: 1px solid #df7b7b;
+}
+.mt5 { margin-top: 5px; }
+.mt10 { margin-top: 10px; }
+.mr10 { margin-top: 10px; }
+.mt20 { margin-top: 20px; }
+.mb10 { margin-bottom: 10px; }
+.mb20 { margin-bottom: 20px; }
+.pr10 { padding-right: 10px; }
+.pb10 { padding-bottom: 10px; }
+.light { color: #aaa; }
+.required { color: red; }
+.squash { padding-top: 0px; padding-bottom: 0px; }
+.center { text-align: center; }
+.indent { padding-left: 30px; }
+.ib { display: inline-block; }
+.faint { color: #4b4b4b; }
+.bigBoxFaint { font-weight: bold; font-size: 1.4em; color: #21212e; font-family: Arial; }
+
+/* FORMS
+----------------------------------------------------------*/
+.editor-label {
+    margin-top: 10px;
+}
+fieldset {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #07070b;
+    border: 1px solid #333;
+}
+legend {
+    font-family: Arial;
+    font-size: 1.5em;
+    color: #9c9c9c;
+}
+input[type=text], input[type=password], textarea, select {
+    border: 1px solid #333;
+    padding: 5px;
+    font-family: Verdana;
+    background-color: #002130;
+    color: #aaa;
+}
+input[type=button] {
+    font-family: Verdana;
+    padding: 5px;
+    font-size:0.9em;
+}
+input[type=submit].big {
+    padding: 10px;
+    font-family: Verdana;
+}
+
+/* TYPOGRAPHY
+----------------------------------------------------------*/
+div.big, span.big, p.big {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.smaller {
+    font-size: 0.9em;
+}
+.title {
+	font-size: 1.4em;
+    font-weight: bold;
+	font-family: Arial;
+}
+.smalltitle {
+	font-size: 1.2em;
+    font-weight: bold;
+	font-family: Arial;
+}

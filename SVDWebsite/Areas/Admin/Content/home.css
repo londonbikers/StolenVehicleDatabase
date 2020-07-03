@@ -1,0 +1,24 @@
+﻿body {
+    font-family: Verdana;
+    font-size: 0.8em;
+}
+li { 
+    display: inline;
+    list-style-type: none;
+    padding-right: 15px;
+}
+#menucontainer {
+    border-bottom: 1px solid #ccc;
+}
+.mt5 { margin-top: 5px; }
+.mt10 { margin-top: 10px; }
+.mt20 { margin-top: 20px; }
+.mb10 { margin-bottom: 10px; }
+.mb20 { margin-bottom: 20px; }
+.pr10 { padding-right: 10px; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+.clear {clear:both;}
+.error {color:Red;}
+.floatLeft {float: left;}
+.floatRight {float: right;}
+img { border: 0px; vertical-align: middle; }

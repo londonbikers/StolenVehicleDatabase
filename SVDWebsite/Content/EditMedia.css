@@ -1,0 +1,18 @@
+﻿#YouTubeVideoUrl {
+    width: 350px;
+    font-size: 0.9em;
+}
+.yvideo {
+    margin-bottom: 10px;
+}
+.photocard {
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid #333; 
+    display: inline-block;
+}
+.photocard div {
+    margin-top: 5px; 
+    padding: 5px 5px 5px 5px; 
+    background-color: #07070b;
+}

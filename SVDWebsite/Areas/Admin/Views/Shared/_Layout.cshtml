@@ -1,0 +1,38 @@
+@using SVDWebsite.Code;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>@ViewBag.Title</title>
+        <link href="@Url.Content("~/areas/admin/content/home.css")" rel="stylesheet" type="text/css" />
+        <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <script>!window.jQuery && document.write('<script src="/scripts/jquery-1.4.3.min.js"><\/script>')</script>
+        <script src="/scripts/lib.js?v=1"></script>
+        <script src="/scripts/jquery.corner.js"></script>
+        @RenderSection("Head", false)
+        <script src="/scripts/plugins.js?v=1"></script>
+    </head>
+    <body>
+        <div class="page">
+            <div id="header">
+                <div id="title">
+                    <h1>SVD: Administration</h1>
+                </div>            
+                <div id="menucontainer">
+                    <ul id="menu">
+                        @(new HtmlString(Html.MenuItem("SVD", "index", "home", string.Empty)))
+                        @(new HtmlString(Html.MenuItem("Latest Vehicles", "index", "landing", "admin")))
+                    </ul>
+                </div>
+            </div>
+            <div id="main">
+                @Html.Partial("_messages")
+                @RenderBody()
+                <div id="footer">
+                    Stolen Vehicle Database &copy; Copyright @DateTime.Now.Year
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

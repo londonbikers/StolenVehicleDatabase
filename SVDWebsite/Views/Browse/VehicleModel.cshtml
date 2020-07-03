@@ -1,0 +1,93 @@
+﻿@using SVDWebsite.Code;
+@using Webdiyer.WebControls.Mvc
+@model SVDWebsite.Models.BrowseByVehicleModelModel
+@{
+    ViewBag.Title = "Model: " + Model.Manufacturer.Name + " " + Model.ModelWrapper.Model.Name;
+}
+<h1>
+    <span class="faint">Model:</span>
+    @Html.ActionLink(Model.Manufacturer.Name, "VehicleManufacturer", "browse", new { manufacturer = Helpers.ToUrlPart(Model.Manufacturer.Name) }, null)
+    @Model.ModelWrapper.Model.Name
+</h1>
+<hr />
+<div>
+    &laquo; <a href="/browse/@Model.ModelWrapper.Model.Type.Name.ToLower()s">Back to @Model.ModelWrapper.Model.Type.Name<text>s</text></a> |
+    @if (!string.IsNullOrEmpty(Model.ModelWrapper.Model.WikipediaId))
+    {
+        Html.WikipediaLink(Model.ModelWrapper.Model);
+        <text> | </text>
+    }
+    @Model.ModelWrapper.Model.EngineSizeCc<text>cc</text>
+    @if (Model.ModelWrapper.Model.YearIntroduced.HasValue)
+    {
+        <text> | Year introduced: </text>@Model.ModelWrapper.Model.YearIntroduced
+    }
+    @if (Model.ModelWrapper.Model.YearStopped.HasValue)
+    {
+        <text> - </text>@Model.ModelWrapper.Model.YearStopped
+    }
+</div>
+
+<div class="stat mr10 rounded2">
+    <div class="statHead">Model Theft Rank</div>
+    <div class="statContent">#@Model.ModelWrapper.Statistic.Rank</div>
+</div>
+
+<div class="stat rounded2">
+    <div class="statHead">Number Of these</div>
+    <div class="statContent">@Model.ModelWrapper.Statistic.Instances.ToString("###,###")</div>
+</div>
+
+<div class="mt20 mb10">
+    Here are the latest @Model.Manufacturer.Name @Model.ModelWrapper.Model.Name<text>s</text> to be added.
+</div>
+<div class="mb10">
+    @Html.Pager(Model.Vehicles, new PagerOptions{PageIndexParameterName="page"})
+</div>
+
+@foreach (var v in Model.Vehicles)
+{
+    <div class="panel">
+        <div class="mb10">
+            @{
+                var href = Url.Action("show", "profiles", new { name = Helpers.ToUrlPart(v.Title), id = v.Id }, "http");
+                if (v.Photos.Count > 0)
+                {
+                    Html.DynamicImageLink(href, v.Photos[0], 170, true);
+                }
+                else
+                {
+                    <a href="@href"><img src="/content/images/unknown.gif" alt="" width="170" height="170" /></a>
+                }
+            }
+        </div>
+        <div class="title">@Html.ActionLink(v.Title, "show", "profiles", new { name = Helpers.ToUrlPart(v.Title), id = v.Id }, null)</div>
+        <div><b>Type:</b> @v.Model.Type.Name</div>
+        <div><b>Date stolen:</b> @v.TheftDate.Value.ToLongDateString()</div>
+        @if (v.TheftLocationPlaces.Count > 0)
+        {
+            var country = v.TheftLocationPlaces.Single(q => q.Type == SVD.PlaceType.Country);
+            var city = v.TheftLocationPlaces.SingleOrDefault(q => q.Type == SVD.PlaceType.AdministrativeAreaLevel2);
+            if (city != null)
+            {
+            <div>
+                <b>City/County:</b>
+                @Html.ActionLink(city.Name, "show", "places", new { id = city.Id, name = Helpers.ToUrlPart(city.Name) }, null)
+            </div>
+            }
+            <div>
+                <b>Country:</b>
+                @Html.ActionLink(country.Name, "show", "places", new { id = country.Id, name = Helpers.ToUrlPart(country.Name) }, null)
+            </div>
+            if (v.Status == SVD.VehicleStatus.Retrieved)
+            {
+                <div class="standout1 rounded mt5 ib">
+                    Retrieved!
+                </div>
+            }
+        }
+        <div class="clear"></div>
+    </div>
+}
+
+@Html.Pager(Model.Vehicles, new PagerOptions{PageIndexParameterName="page"})

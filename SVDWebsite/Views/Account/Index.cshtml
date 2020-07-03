@@ -1,0 +1,51 @@
+﻿@using SVDWebsite.Code;
+@model SVDWebsite.Models.AccountIndexModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Your Account</h1>
+
+<div class="mt10 box">
+    @Html.ActionLink("Change your password", "changepassword")
+</div>
+
+<h2>Your Vehicles</h2>
+
+@foreach (var v in Model.Vehicles)
+{
+    var a = (v.Status == SVD.VehicleStatus.Archived);
+    <div class="mb10">
+        <div class="floatLeft pr10 photo">
+            @{
+                if (v.Photos.Count > 0)
+                {
+                    var href = Url.Action("show", "profiles", new { name = Helpers.ToUrlPart(v.Title), id = v.Id }, "http");
+                    Html.DynamicImageLink(href, v.Photos[0], 100, true);
+                }
+                else
+                {
+                    <img src="http://mpncdn.eu/svd/c/images/question-mark-100.gif" alt="" />
+                }
+            }
+        </div>
+        <div class="big">@v.Title</div>
+        
+        <div>
+            @Html.ActionLink("View Profile", "show", "profiles", new { name = Helpers.ToUrlPart(v.Title), id = v.Id }, null) | 
+            @if (!a) 
+            {
+                @Html.ActionLink("Edit Details", "edit", new { id = v.Id })
+                <text>|</text>
+                @Html.ActionLink("Change Photos & Videos", "editmedia", new { id = v.Id })
+                <text>|</text>
+            }
+            @Html.ActionLink("Delete", "delete", new { id = v.Id })
+        </div>
+        @if (a)
+        {
+            <div class="block1 rounded mt5">Archived!</div>
+        }
+        <div class="clear"></div>
+    </div>
+}

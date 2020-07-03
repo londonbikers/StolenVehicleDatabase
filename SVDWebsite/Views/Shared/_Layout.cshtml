@@ -1,0 +1,88 @@
+@using SVDWebsite.Code;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>@ViewBag.Title</title>
+        <meta name="keywords" content="theft, stolen, vehicles, stolen vehicles, cars, motorcycles, vans, trucks, lorries, gta, grand theft auto" />
+		<meta name="description" content="SVD is a database of stolen vehicles. Our mission is to help reduce vehicle theft. We don't believe all is being done that could be done and we want to empower the people that are trying. It's that simple." />
+        <link href="http://mpncdn.eu/svd/c/site.css" rel="stylesheet" type="text/css" />
+        <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <script type="text/javascript">!window.jQuery && document.write('<script src="http://mpncdn.eu/svd/j/jquery-1.5.1.min.js"><\/script>')</script>
+        <script type="text/javascript" src="http://mpncdn.eu/svd/j/lib.js"></script>
+        <script type="text/javascript" src="http://mpncdn.eu/svd/j/jquery.corner.js"></script>
+        @RenderSection("Head", false)
+        <script type="text/javascript" src="http://mpncdn.eu/svd/j/plugins.js"></script>        
+    </head>
+    <body>
+        <div id="logo"><a href="/"><img src="http://mpncdn.eu/svd/c/images/svdlogo.gif" alt="Stolen Vehicle Database" width="184" height="91" /></a></div>
+        <div id="header">
+            <div id="topHead">
+                <div id="menucontainer">
+                    <ul id="menu">
+					    @(new HtmlString(Html.MenuItem("Home", "index", "home")))
+                        @(new HtmlString(Html.MenuItem("Browse", "index", "browse")))
+					    @if(!Request.IsAuthenticated) {
+						    @(new HtmlString(Html.MenuItem("Register", "register", "account")))
+					    }
+                        @(new HtmlString(Html.MenuItem("About", "index", "about")))
+                        @if(Request.IsAuthenticated) {
+                            @(new HtmlString(Html.MenuItem("Me", "index", "account")))
+                            @(new HtmlString(Html.MenuItem("Add Vehicle", "index", "addvehicle", null, "tabstandout")))
+                            if(Roles.IsUserInRole("Admin") || Roles.IsUserInRole("Staff")) {
+                                @(new HtmlString(Html.MenuItem("Admin", "index", "landing", "admin")))
+                            }
+                        }
+                        @Html.Partial("_LogOnPartial")
+                    </ul>
+                </div>
+            </div>
+            <div id="bottomHead">
+                <div>@Html.Partial("_LogOnName")</div>
+            </div>            
+        </div>
+        <div id="master">
+            <div id="main">
+                @Html.Partial("_messages")
+                @RenderBody()
+                <div id="footer">
+                    Stolen Vehicle Database &copy; Copyright @DateTime.Now.Year. Built and hosted by <a href="http://londonbikers.com" target="_blank">londonbikers.com</a>.
+                    <div>
+                        <a href="/about/terms">Terms &amp; Conditions</a> | <a href="/about/privacy">Privacy Policy</a>
+                    </div>
+                    <div>
+                        Find us on:
+                        <a href="http://www.facebook.com/pages/The-Stolen-Vehicle-Database/118916611515009" target="_blank">Facebook</a> |
+                        <a href="http://twitter.com/#!/stolenvehicles">Twitter</a>
+                    </div>
+                    <div class="mt5">
+                        <script type="text/javascript" src="http://twittercounter.com/embed/stolenvehicles/525252/d7d1cc"></script><noscript><a href="http://twittercounter.com/stolenvehicles">SVD on Twitter Counter.com</a></noscript>
+                    </div>
+                </div>
+            </div>
+            <div id="fb-root"></div>
+            <script type="text/javascript">
+                window.fbAsyncInit = function () {
+                        FB.init({ appId: '112602048807591', status: true, cookie: true, xfbml: true
+                    });
+                };
+                (function () {
+                    var e = document.createElement('script'); e.async = true;
+                    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+                    document.getElementById('fb-root').appendChild(e);
+                } ());
+            </script>
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-142260-5']);
+                _gaq.push(['_trackPageview']);
+                (function () {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        </div>
+    </body>
+</html>

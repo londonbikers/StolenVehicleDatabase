@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Responses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Responses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vdws.mediapanther.com/VdService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Models" />
+  <xs:import schemaLocation="http://vdws.mediapanther.com/VdService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" />
+  <xs:complexType name="GetVehicleTypesResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Models" minOccurs="0" name="Content" nillable="true" type="q1:ArrayOfVehicleType" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q2:GetOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetVehicleTypesResponse" nillable="true" type="tns:GetVehicleTypesResponse" />
+  <xs:complexType name="ResponseBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBase" nillable="true" type="tns:ResponseBase" />
+  <xs:complexType name="GetVehicleManufacturersResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Models" minOccurs="0" name="Content" nillable="true" type="q3:ArrayOfVehicleManufacturer" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q4:GetOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetVehicleManufacturersResponse" nillable="true" type="tns:GetVehicleManufacturersResponse" />
+  <xs:complexType name="GetVehicleManufacturerResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Models" minOccurs="0" name="Content" nillable="true" type="q5:VehicleManufacturer" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q6:GetOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetVehicleManufacturerResponse" nillable="true" type="tns:GetVehicleManufacturerResponse" />
+  <xs:complexType name="GetVehicleModelResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Models" minOccurs="0" name="Content" nillable="true" type="q7:VehicleModel" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q8:GetOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetVehicleModelResponse" nillable="true" type="tns:GetVehicleModelResponse" />
+  <xs:complexType name="GetVehicleModelsByManufacturerIdResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetVehicleModelsByManufacturerResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetVehicleModelsByManufacturerIdResponse" nillable="true" type="tns:GetVehicleModelsByManufacturerIdResponse" />
+  <xs:complexType name="GetVehicleModelsByManufacturerResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager.Models" minOccurs="0" name="Content" nillable="true" type="q9:ArrayOfVehicleModel" />
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q10:GetOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetVehicleModelsByManufacturerResponse" nillable="true" type="tns:GetVehicleModelsByManufacturerResponse" />
+  <xs:complexType name="UpdateVehicleTypeResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q11:UpdateOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateVehicleTypeResponse" nillable="true" type="tns:UpdateVehicleTypeResponse" />
+  <xs:complexType name="UpdateVehicleManufacturerResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q12:UpdateOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateVehicleManufacturerResponse" nillable="true" type="tns:UpdateVehicleManufacturerResponse" />
+  <xs:complexType name="UpdateVehicleModelResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q13:UpdateOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateVehicleModelResponse" nillable="true" type="tns:UpdateVehicleModelResponse" />
+  <xs:complexType name="UpdateClientResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q14:UpdateOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateClientResponse" nillable="true" type="tns:UpdateClientResponse" />
+  <xs:complexType name="DeleteVehicleTypeResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q15:DeleteOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteVehicleTypeResponse" nillable="true" type="tns:DeleteVehicleTypeResponse" />
+  <xs:complexType name="DeleteVehicleModelResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q16:DeleteOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteVehicleModelResponse" nillable="true" type="tns:DeleteVehicleModelResponse" />
+  <xs:complexType name="DeleteClientResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/VehicleDatabaseManager" minOccurs="0" name="ResultType" type="q17:DeleteOperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteClientResponse" nillable="true" type="tns:DeleteClientResponse" />
+</xs:schema>

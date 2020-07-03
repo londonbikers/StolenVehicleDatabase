@@ -1,0 +1,114 @@
+﻿@using SVDWebsite.Code;
+@using System.Collections;
+@using Webdiyer.WebControls.Mvc;
+@model SVDWebsite.Models.PlaceModel
+@{
+    ViewBag.Title = Model.Place.Name;
+}
+@section Head
+{
+    <link type="text/css" href="http://mpncdn.eu/svd/c/place.css" rel="stylesheet" />
+    @if (Model.Place.Latitude.HasValue && Model.Place.Longitude.HasValue)
+    {
+        <script type="text/javascript">
+            var zoomLevel = @Model.Place.DefaultMapZoomLevel;
+            var markerLat = "@Model.Place.Latitude.Value";
+            var markerLong = "@Model.Place.Longitude.Value";
+            var positions = [@Html.Raw(Model.GetVehicleLocations())];
+        </script>
+    }
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://mpncdn.eu/svd/j/pages/place.js"></script>
+}
+<h1><span class="faint">Place:</span> @Model.Place.Name</h1>
+<hr />
+@if (Model.ParentPlaces != null)
+{
+<div class="mt10 title">
+Within: 
+@{   
+    for (var i = 0; i < Model.ParentPlaces.Count; i++)
+    {
+        <text>@Html.ActionLink(Model.ParentPlaces[i].Name, "show", "places", new { id = Model.ParentPlaces[i].Id, name = Helpers.ToUrlPart(Model.ParentPlaces[i].Name) }, null)</text>
+        if (i < Model.ParentPlaces.Count - 1)
+        {
+            <text> / </text>
+        }
+    }
+}
+</div>
+}
+
+<div class="stat mr10 rounded2">
+    <div class="statHead">@{Html.ConvertPlaceType(Model.Place.Type);} Theft Rank</div>
+    <div class="statContent">#@Model.Place.Statistic.Rank</div>
+</div>
+
+<div class="stat rounded2">
+    <div class="statHead">Number Of thefts</div>
+    <div class="statContent">@Model.Place.Statistic.Instances.ToString("###,###")</div>
+</div>
+
+@if (Model.Place.Latitude.HasValue && Model.Place.Longitude.HasValue)
+{
+    <div class="clearBoxTop mt10">
+        Showing the latest vehicles only for @Model.Place.Name | full maps coming soon
+    </div>
+    <div class="box">
+        <div id="mapCanvas"></div>
+    </div>
+}
+
+<h2>Latest Vehicles</h2>
+
+<div class="mb10">
+    @Html.Pager(Model.Vehicles, new PagerOptions { PageIndexParameterName = "page" })
+</div>
+
+@foreach (var v in Model.Vehicles)
+{
+     <div class="panel">
+        <div class="mb10">
+            @{
+                var href = Url.Action("show", "profiles", new { name = Helpers.ToUrlPart(v.Title), id = v.Id }, "http");
+                if (v.Photos.Count > 0)
+                {
+                    Html.DynamicImageLink(href, v.Photos[0], 170, true);
+                }
+                else
+                {
+                    <a href="@href"><img src="/content/images/unknown.gif" alt="" width="170" height="170" /></a>
+                }
+            }
+        </div>
+        <div class="title">@Html.ActionLink(v.Title, "show", "profiles", new { name = Helpers.ToUrlPart(v.Title), id = v.Id }, null)</div>
+        <div><b>Type:</b> @v.Model.Type.Name</div>
+        <div><b>Date stolen:</b> @v.TheftDate.Value.ToLongDateString()</div>
+        @if (v.TheftLocationPlaces.Count > 0)
+        {
+            var country = v.TheftLocationPlaces.Single(q => q.Type == SVD.PlaceType.Country);
+            var city = v.TheftLocationPlaces.SingleOrDefault(q => q.Type == SVD.PlaceType.AdministrativeAreaLevel2);
+            if (city != null)
+            {
+            <div>
+                <b>City/County:</b>
+                @Html.ActionLink(city.Name, "show", "places", new { id = city.Id, name = Helpers.ToUrlPart(city.Name) }, null)
+            </div>
+            }
+            <div>
+                <b>Country:</b>
+                @Html.ActionLink(country.Name, "show", "places", new { id = country.Id, name = Helpers.ToUrlPart(country.Name) }, null)
+            </div>
+            
+            if (v.Status == SVD.VehicleStatus.Retrieved)
+            {
+                <div class="standout1 rounded mt5 ib">
+                    Retrieved!
+                </div>
+            }
+        }
+        <div class="clear"></div>
+    </div>
+}
+
+@Html.Pager(Model.Vehicles, new PagerOptions{PageIndexParameterName="page"})

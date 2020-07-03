@@ -1,0 +1,4576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="1.1" DspName="Microsoft.Data.Schema.Sql.Sql100DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False">
+	<Header>
+		<CustomData Category="ModelCapability">
+			<Metadata Name="ModelCapability" Value="Default" />
+		</CustomData>
+	</Header>
+	<Model>
+		<Annotation Type="DataGenerationConfigAnnotation">
+			<Property Name="PlanVersion" Value="2.0" />
+			<Property Name="ValidateTarget" Value="True" />
+		</Annotation>
+		<Annotation Type="DataSinkAnnotation">
+			<Property Name="DataSinkExtensionXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Sinks.SqlBulkClientSink&quot; /&gt;" />
+			<Property Name="ConfigurationName" Value="DefaultDataSink" />
+		</Annotation>
+		<Element Type="ISql100DatabaseOptions">
+			<Property Name="Collation" Value="Latin1_General_CI_AS" />
+			<Property Name="IsAnsiPaddingOn" Value="False" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Property Name="IsCursorDefaultScopeGlobal" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="RecoveryMode" Value="1" />
+			<Property Name="CompatibilityMode" Value="90" />
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint">
+			<Property Name="IsClustered" Value="False" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Roles].[RoleId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Roles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Profile].[UserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Profile]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint">
+			<Property Name="IsClustered" Value="False" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Membership].[UserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Membership]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_SchemaVersions].[Feature]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_SchemaVersions].[CompatibleSchemaVersion]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_SchemaVersions]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint">
+			<Property Name="IsClustered" Value="False" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Users].[UserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint">
+			<Property Name="IsClustered" Value="False" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Applications].[ApplicationId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_WebEvent_Events].[EventId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_WebEvent_Events]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint">
+			<Property Name="IsClustered" Value="False" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_PersonalizationPerUser].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationPerUser]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_PersonalizationAllUsers].[PathId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationAllUsers]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint">
+			<Property Name="IsClustered" Value="False" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Paths].[PathId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Paths]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_UsersInRoles].[UserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_UsersInRoles].[RoleId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_UsersInRoles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100UniqueConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Applications].[LoweredApplicationName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100UniqueConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Applications].[ApplicationName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[(newid())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Roles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[aspnet_Roles].[RoleId]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Membership]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[aspnet_Membership].[PasswordFormat]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[(newid())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users].[UserId]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[(NULL)]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users].[MobileAlias]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users].[IsAnonymous]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[(newid())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications].[ApplicationId]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[(newid())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationPerUser]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationPerUser].[Id]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[(newid())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Paths]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[aspnet_Paths].[PathId]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Roles].[ApplicationId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Roles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications].[ApplicationId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Profile].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Profile]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Membership].[ApplicationId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Membership]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications].[ApplicationId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Membership].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Membership]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users].[ApplicationId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications].[ApplicationId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationPerUser].[PathId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationPerUser]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Paths].[PathId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Paths]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationPerUser].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationPerUser]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationAllUsers].[PathId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationAllUsers]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Paths].[PathId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Paths]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Paths].[ApplicationId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Paths]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications].[ApplicationId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[aspnet_UsersInRoles].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_UsersInRoles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[aspnet_UsersInRoles].[RoleId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_UsersInRoles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[aspnet_Roles].[RoleId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[aspnet_Roles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90Schema" Name="[aspnet_Membership_BasicAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_Membership_FullAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_Membership_ReportingAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_Personalization_BasicAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_Personalization_FullAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_Personalization_ReportingAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_Profile_BasicAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_Profile_FullAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_Profile_ReportingAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_Roles_BasicAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_Roles_FullAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_Roles_ReportingAccess]" />
+		<Element Type="ISql90Schema" Name="[aspnet_WebEvent_FullAccess]" />
+		<Element Type="ISql100Table" Name="[dbo].[aspnet_Applications]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Applications].[ApplicationName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Applications].[LoweredApplicationName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Applications].[ApplicationId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseGuid&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Applications].[Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="1" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[aspnet_Applications].[aspnet_Applications_Index]">
+			<Property Name="IsClustered" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Applications].[LoweredApplicationName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[aspnet_Applications]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[aspnet_Membership]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="TextInRowSize" Value="3000" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[ApplicationId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[Password]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="128" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[PasswordFormat]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Int&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[PasswordSalt]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="128" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[MobilePIN]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[Email]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[LoweredEmail]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[PasswordQuestion]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[PasswordAnswer]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="128" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[IsApproved]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Bit&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[IsLockedOut]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Bit&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[CreateDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[LastLoginDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[LastPasswordChangedDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[LastLockoutDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[FailedPasswordAttemptCount]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Int&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[FailedPasswordAttemptWindowStart]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[FailedPasswordAnswerAttemptCount]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Int&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[FailedPasswordAnswerAttemptWindowStart]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Membership].[Comment]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[ntext]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="100" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[aspnet_Membership].[aspnet_Membership_index]">
+			<Property Name="IsClustered" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Membership].[ApplicationId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Membership].[LoweredEmail]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[aspnet_Membership]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[aspnet_Paths]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Paths].[ApplicationId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Paths].[PathId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseGuid&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Paths].[Path]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Paths].[LoweredPath]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="50" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[aspnet_Paths].[aspnet_Paths_index]">
+			<Property Name="IsClustered" Value="True" />
+			<Property Name="IsUnique" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Paths].[ApplicationId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Paths].[LoweredPath]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[aspnet_Paths]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[aspnet_PersonalizationAllUsers]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="TextInRowSize" Value="6000" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_PersonalizationAllUsers].[PathId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_PersonalizationAllUsers].[PageSettings]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[image]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Image&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_PersonalizationAllUsers].[LastUpdatedDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="50" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[aspnet_PersonalizationPerUser]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="TextInRowSize" Value="6000" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_PersonalizationPerUser].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseGuid&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_PersonalizationPerUser].[PathId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_PersonalizationPerUser].[UserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_PersonalizationPerUser].[PageSettings]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[image]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Image&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_PersonalizationPerUser].[LastUpdatedDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="50" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[aspnet_PersonalizationPerUser].[aspnet_PersonalizationPerUser_index1]">
+			<Property Name="IsClustered" Value="True" />
+			<Property Name="IsUnique" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_PersonalizationPerUser].[PathId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_PersonalizationPerUser].[UserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationPerUser]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[aspnet_PersonalizationPerUser].[aspnet_PersonalizationPerUser_ncindex2]">
+			<Property Name="IsUnique" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_PersonalizationPerUser].[UserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_PersonalizationPerUser].[PathId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[aspnet_PersonalizationPerUser]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[aspnet_Profile]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="TextInRowSize" Value="6000" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Profile].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Profile].[PropertyNames]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[ntext]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Profile].[PropertyValuesString]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[ntext]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Profile].[PropertyValuesBinary]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[image]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Image&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Profile].[LastUpdatedDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="100" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[aspnet_Roles]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Roles].[ApplicationId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Roles].[RoleId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseGuid&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Roles].[RoleName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Roles].[LoweredRoleName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Roles].[Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="2" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[aspnet_Roles].[aspnet_Roles_index1]">
+			<Property Name="IsClustered" Value="True" />
+			<Property Name="IsUnique" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Roles].[ApplicationId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Roles].[LoweredRoleName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[aspnet_Roles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[aspnet_SchemaVersions]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_SchemaVersions].[Feature]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="128" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_SchemaVersions].[CompatibleSchemaVersion]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="128" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_SchemaVersions].[IsCurrentVersion]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Bit&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="50" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[aspnet_Users]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Users].[ApplicationId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Users].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseGuid&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Users].[UserName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Users].[LoweredUserName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Users].[MobileAlias]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Users].[IsAnonymous]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Bit&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_Users].[LastActivityDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="100" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[aspnet_Users].[aspnet_Users_Index]">
+			<Property Name="IsClustered" Value="True" />
+			<Property Name="IsUnique" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Users].[ApplicationId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Users].[LoweredUserName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[aspnet_Users].[aspnet_Users_Index2]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Users].[ApplicationId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_Users].[LastActivityDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[aspnet_Users]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[aspnet_UsersInRoles]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_UsersInRoles].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_UsersInRoles].[RoleId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="50" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[aspnet_UsersInRoles].[aspnet_UsersInRoles_index]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[aspnet_UsersInRoles].[RoleId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[aspnet_UsersInRoles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[aspnet_WebEvent_Events]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[EventId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="32" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[EventTimeUtc]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[EventTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[EventType]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[EventSequence]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Precision" Value="19" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseDecimal&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[EventOccurrence]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Precision" Value="19" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseDecimal&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[EventCode]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Int&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[EventDetailCode]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Int&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[Message]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="1024" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[ApplicationPath]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[ApplicationVirtualPath]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[MachineName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[RequestUrl]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="1024" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[ExceptionType]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[aspnet_WebEvent_Events].[Details]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[ntext]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="50" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[Colours]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Colours].[ID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Colours].[Name]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="10" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql90DefaultConstraint" Name="[dbo].[DF_VehiclePhotos_DateCreated]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(getdate())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehiclePhotos]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[VehiclePhotos].[DateCreated]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint" Name="[dbo].[DF_VehiclePhotos_DateModified]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(getdate())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehiclePhotos]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[VehiclePhotos].[DateModified]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint" Name="[dbo].[DF_VehiclePhotos_PhotoType]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehiclePhotos]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[VehiclePhotos].[PhotoType]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint" Name="[dbo].[DF_Vehicles_DateCreated]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(getdate())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[Vehicles].[DateCreated]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint" Name="[dbo].[DF_Vehicles_DateModified]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(getdate())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[Vehicles].[DateModified]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint" Name="[dbo].[DF_Vehicles_ManufacturerID]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[Vehicles].[ManufacturerID]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90DefaultConstraint" Name="[dbo].[DF_Vehicles_Status]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[Vehicles].[Status]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint" Name="[dbo].[FK_Locations_Locations]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Locations].[ParentLocationId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Locations]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Locations].[ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Locations]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint" Name="[dbo].[FK_VehicleLocations_Locations]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[VehicleLocations].[LocationID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehicleLocations]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Locations].[ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Locations]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint" Name="[dbo].[FK_VehicleLocations_Vehicles]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[VehicleLocations].[VehicleID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehicleLocations]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Vehicles].[ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint" Name="[dbo].[FK_VehiclePhotos_Vehicles]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[VehiclePhotos].[VehicleID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehiclePhotos]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Vehicles].[ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint" Name="[dbo].[FK_Vehicles_Colours]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Vehicles].[ColourID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Colours].[ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Colours]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint" Name="[dbo].[FK_Vehicles_TheftMethods]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Vehicles].[TheftMethodID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[TheftMethods].[ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[TheftMethods]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint" Name="[dbo].[FK_VehicleSecurity_Vehicles]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[VehicleSecurity].[VehicleID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehicleSecurity]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Vehicles].[ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint" Name="[dbo].[FK_VehicleSecurity_VehicleSecurityTypes]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[VehicleSecurity].[TypeID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehicleSecurity]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[VehicleSecurityTypes].[ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[VehicleSecurityTypes]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql90ForeignKeyConstraint" Name="[dbo].[FK_VehicleVideos_Vehicles]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[VehicleVideos].[VehicleID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehicleVideos]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Vehicles].[ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[Locations]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Locations].[ID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Locations].[Name]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Locations].[Code]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Locations].[Type]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[tinyint]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.TinyInt&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Locations].[Latitude]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[float]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseFloat&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Locations].[Longitude]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[float]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseFloat&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Locations].[ParentLocationId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+						<Annotation Type="InputDescriptorAnnotation">
+							<Property Name="Value" Value="5" />
+							<Property Name="InputName" Value="PercentageNull" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="600" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[Locations].[SVD_LocationsByNameAndType]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Locations].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Locations].[Name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Locations].[Type]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[Locations]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint" Name="[dbo].[PK_Colours]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Colours].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Colours]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint" Name="[dbo].[PK_Locations]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Locations].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Locations]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint" Name="[dbo].[PK_TheftMethods]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[TheftMethods].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[TheftMethods]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint" Name="[dbo].[PK_VehicleLocations]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[VehicleLocations].[VehicleID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[VehicleLocations].[LocationID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehicleLocations]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint" Name="[dbo].[PK_VehiclePhotos]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[VehiclePhotos].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehiclePhotos]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint" Name="[dbo].[PK_Vehicles]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Vehicles].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint" Name="[dbo].[PK_VehicleSecurity]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[VehicleSecurity].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehicleSecurity]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint" Name="[dbo].[PK_VehicleSecurityTypes]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[VehicleSecurityTypes].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehicleSecurityTypes]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100PrimaryKeyConstraint" Name="[dbo].[PK_VehicleVideos]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[VehicleVideos].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VehicleVideos]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[TheftMethods]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[TheftMethods].[ID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[TheftMethods].[Name]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="10" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[VehicleLocations]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehicleLocations].[VehicleID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehicleLocations].[LocationID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="1000" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[VehiclePhotos]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehiclePhotos].[ID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehiclePhotos].[VehicleID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehiclePhotos].[Filename]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehiclePhotos].[Comment]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="1000" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+						<Annotation Type="InputDescriptorAnnotation">
+							<Property Name="Value" Value="80" />
+							<Property Name="InputName" Value="PercentageNull" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehiclePhotos].[DateModified]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehiclePhotos].[DateCreated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehiclePhotos].[PhotoType]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[tinyint]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.TinyInt&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="750" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[Vehicles]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[ID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[MemberUID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseGuid&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[ManufacturerID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Int&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[ModelID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Int&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[VehicleTypeId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Int&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[ColourID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[Year]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Int&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[Registration]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[VIN]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="17" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[EngineNumber]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="17" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[ntext]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[PoliceForce]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[PolicePhoneNo]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[PoliceReference]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[TheftDescription]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[ntext]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[TheftLongitude]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="18" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseDecimal&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[TheftLatitude]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="18" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.DatabaseDecimal&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[IsLocationApprox]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.Bit&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[TheftDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[TheftMethodID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[DateModified]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[DateCreated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.SqlDateTimeGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[Vehicles].[Status]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[tinyint]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.TinyInt&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="1000" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[Vehicles].[SVD_VehiclesByMemberUid]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Vehicles].[MemberUID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Vehicles].[Status]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Vehicles].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[Vehicles].[SVD_VehiclesByType]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Vehicles].[VehicleTypeId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Vehicles].[Status]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Vehicles].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Index" Name="[dbo].[Vehicles].[SVD_VehicleStatus]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Vehicles].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Vehicles].[Status]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[Vehicles]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[VehicleSecurity]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehicleSecurity].[ID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehicleSecurity].[VehicleID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehicleSecurity].[TypeID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="600" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[VehicleSecurityTypes]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehicleSecurityTypes].[ID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehicleSecurityTypes].[Name]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="10" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql100Table" Name="[dbo].[VehicleVideos]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehicleVideos].[ID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehicleVideos].[VehicleID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.ForeignKey&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehicleVideos].[Url]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISql100SimpleColumn" Name="[dbo].[VehicleVideos].[Comment]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="1000" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="ColumnConfigAnnotation">
+							<Property Name="Selected" Value="True" />
+							<Property Name="Seed" Value="5" />
+							<Property Name="GeneratorExtensionHandleXml" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ExtensionHandle AssemblyName=&quot;Microsoft.Data.Schema.Generators.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot; TypeName=&quot;Microsoft.Data.Schema.Generators.Sql.StringGenerator&quot; /&gt;" />
+							<Property Name="OutputKey" Value="Result" />
+						</Annotation>
+						<Annotation Type="InputDescriptorAnnotation">
+							<Property Name="Value" Value="80" />
+							<Property Name="InputName" Value="PercentageNull" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="TableConfigAnnotation">
+				<Property Name="NumRows" Value="200" />
+				<Property Name="Selected" Value="True" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>

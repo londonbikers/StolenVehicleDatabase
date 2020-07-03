@@ -1,0 +1,38 @@
+﻿@model SVDWebsite.Models.AccountDeleteModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h1>Delete Your Vehicle</h1>
+<h2>@Model.Vehicle.Title</h2>
+
+<div class="box mb20">
+    To make your @Model.Vehicle.Model.Type.Name.ToLower() profile go away, please just archive it below. Its profile 
+    will no longer be viewable or show up in search results, but will show up as a statistic in our data.
+
+    <div class="mt10">
+        @using (Html.BeginForm("deletehandler", "account"))
+        {
+            <input type="hidden" name="id" value="@Model.Vehicle.Id" />
+            <input type="hidden" name="mode" value="archive" />
+            <input type="submit" value="Archive Vehicle" class="big" />
+        }
+    </div>
+
+</div>
+
+<div class="clearBox">
+    If you want to have your vehicle profile deleted then you can do so below. Please bear in mind though that this 
+    will also remove it from it from our reports and statistics that are of use to those attempting to
+    combat vehicle crime.
+
+    <div class="mt10">
+        @using (Html.BeginForm("deletehandler", "account"))
+        {
+            <input type="hidden" name="id" value="@Model.Vehicle.Id" />
+            <input type="hidden" name="mode" value="delete" />
+            <input type="submit" value="Delete Vehicle" class="big" />
+        }
+    </div>
+</div>

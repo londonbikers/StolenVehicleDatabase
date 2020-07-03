@@ -1,0 +1,232 @@
+﻿@using SVDWebsite.Code;
+@model SVDWebsite.Models.AddVehicleModel
+@{
+    ViewBag.Title = "Add a vehicle";
+}
+@section Head
+{
+    <link type="text/css" href="http://mpncdn.eu/svd/c/pepper-grinder/jquery-ui-1.8.6.custom.css" rel="stylesheet" />	
+    <link type="text/css" href="http://mpncdn.eu/svd/c/addvehicle.css" rel="stylesheet" />
+    <style>
+	    .ui-autocomplete-loading { background: white url('http://mpncdn.eu/c/images/ui-anim_basic_16x16.gif') right center no-repeat; }
+	</style>
+    <script type="text/javascript" src="http://mpncdn.eu/svd/j/jquery.cascadingDropDown.js"></script>
+    <script type="text/javascript" src="http://mpncdn.eu/svd/j/jquery-ui-1.8.14.custom.min.js"></script>
+    <script type="text/javascript">
+        var userRegion = "@Helpers.GetUserRegion()"
+    </script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <!--<script type="text/javascript" src="http://mpncdn.eu/svd/j/pages/addvehicle.js"></script>-->
+    <script type="text/javascript" src="/scripts/pages/addvehicle.js"></script>
+}
+
+<h1>Add a stolen vehicle</h1>
+<div class="box mt10">
+    We're sorry you've been the victim of vehicle theft. Please supply the details of your vehicle and the theft...
+    <div class="mt10">
+        <span class="required">*</span> = a required piece of info
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Houston, we've got a problem! Please correct the errors and try again.")
+    <div>
+        <fieldset>
+            <legend>Vehicle Information</legend>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.StatusId):
+            </div>
+            <div class="editor-field">
+                @Html.DropDownListFor(m => m.StatusId, Model.Status)
+                @Html.ValidationMessageFor(m => m.StatusId)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.VehicleTypeId):
+            </div>
+            <div class="editor-field">
+                @Html.DropDownListFor(m => m.VehicleTypeId, Model.VehicleTypes)
+                @Html.ValidationMessageFor(m => m.VehicleTypeId)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.VehicleManufacturerId):
+            </div>
+            <div class="editor-field">
+                @Html.DropDownListFor(m => m.VehicleManufacturerId, Model.VehicleManufacturers)
+                @Html.ValidationMessageFor(m => m.VehicleManufacturerId)
+            </div>
+
+             <div class="editor-label">
+                @Html.LabelFor(m => m.VehicleModelId):
+            </div>
+            <div class="editor-field">
+                @Html.DropDownListFor(m => m.VehicleModelId, Model.VehicleModels)
+                @Html.ValidationMessageFor(m => m.VehicleModelId)
+            </div>
+
+            <div class="mt10 light">
+                <i>Are we missing your make or model? <a href="mailto:contact@stolenvehicledatabase.org">Contact us</a>!</i>
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.ColourId):
+            </div>
+            <div class="editor-field">
+                @Html.DropDownListFor(m => m.ColourId, Model.Colours, "-- Select --")
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.Year):
+            </div>
+            <div class="editor-field">
+                @Html.DropDownListFor(m => m.Year, Model.Years)
+                <span class="required">*</span>
+                @Html.ValidationMessageFor(m => m.Year)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.Registration):
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.Registration)
+                <span class="required">*</span>
+                @Html.ValidationMessageFor(m => m.Registration)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.Vin):
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.Vin)
+                @Html.ValidationMessageFor(m => m.Vin)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.EngineNumber):
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.EngineNumber)
+                @Html.ValidationMessageFor(m => m.EngineNumber)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.Description):
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(m => m.Description, 5, 50, null)
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Police Information</legend>
+            <div class="editor-label">
+                @Html.LabelFor(m => m.PoliceForce):
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.PoliceForce)
+                @Html.ValidationMessageFor(m => m.PoliceForce)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.PoliceReference):
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.PoliceReference)
+                @Html.ValidationMessageFor(m => m.PoliceReference)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.PolicePhoneNumber):
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.PolicePhoneNumber)
+                @Html.ValidationMessageFor(m => m.PolicePhoneNumber)
+            </div>
+        </fieldset>
+
+        <fieldset>
+			<legend>Security</legend>
+			<div class="Highlight">
+				Please let us know what sort of security your vehicle had, if any.
+			</div>
+            <input id="VehicleSecurityTypeCsv" name="VehicleSecurityTypeCsv" type="hidden" value="@(Model.VehicleSecurityTypeCsv)" />
+			@Html.DropDownList("SecurityTypesList", Model.VehicleSecurityTypes)
+			<input type="button" value="Add" onclick="AddSecurityType();" />
+			<ul id="vstList">
+                @foreach (var type in Model.VehicleSecurityTypesChosen) {
+                    <li id="vst-@type.Id"><a href="javascript:RemoveSecurityType(@type.Id);"><img src="http://mpncdn.eu/svd/c/images/icons/delete.png" alt="remove" /></a> @type.Name</li>
+                }
+			</ul>
+		</fieldset>
+
+        <fieldset>
+            <legend>Theft Details</legend>
+            <div class="editor-label">
+                @Html.LabelFor(m => m.TheftDate):
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.TheftDate)
+                <span class="required">*</span>
+                @Html.ValidationMessageFor(m => m.TheftDate)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.TheftMethodId):
+            </div>
+            <div class="editor-field">
+                @Html.DropDownListFor(m => m.TheftMethodId, Model.TheftMethods, "-- Select --")
+                <span class="required">*</span>
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.TheftDescription)
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(m => m.TheftDescription, 5, 50, null)
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Theft Location</legend>
+            <div id="mapControls">
+                @Html.TextBoxFor(m => m.TheftLocation) <input id="findLocationBtn" type="button" value="find location" />
+            </div>
+            <div id="mapControlGuide">
+                Once the location is found, we'll add a marker for you to move around.
+            </div>
+
+            <div class="notification mb20">
+                <span class="title">Wait!</span> - Please be careful when supplying a location. If the vehicle was stolen from your home, be aware of the potential risk of advertising the 
+                location. If so, move the marker to the town centre or somewhere less specific.
+            </div>
+
+            @Html.HiddenFor(q => q.TheftLocationLat)
+            @Html.HiddenFor(q => q.TheftLocationLong)
+            @Html.HiddenFor(q => q.TheftLocationCountry)
+            @Html.HiddenFor(q => q.TheftLocationCountryCode)
+            @Html.HiddenFor(q => q.TheftLocationCountryPos)
+            @Html.HiddenFor(q => q.TheftLocationAdministrativeAreaLevel1)
+            @Html.HiddenFor(q => q.TheftLocationAdministrativeAreaLevel1Pos)
+            @Html.HiddenFor(q => q.TheftLocationAdministrativeAreaLevel2)
+            @Html.HiddenFor(q => q.TheftLocationAdministrativeAreaLevel2Pos)
+            @Html.HiddenFor(q => q.TheftLocationLocality)
+            @Html.HiddenFor(q => q.TheftLocationLocalityPos)
+            @Html.HiddenFor(q => q.TheftLocationSubLocality)
+            @Html.HiddenFor(q => q.TheftLocationSubLocalityPos)
+            @Html.HiddenFor(q => q.TheftLocationRoute)
+            @Html.HiddenFor(q => q.TheftLocationRoutePos)
+
+            <div id="markerGuide">
+                <img src="http://mpncdn.eu/svd/c/images/icons/info.png" alt="" />
+                Found it! Now drag the marker to the exact point of theft.
+            </div>
+            <div id="mapCanvas"></div>
+        </fieldset>
+
+        <p><input id="addVehicleBtn" type="submit" value="Add Vehicle" class="big" /></p>
+        
+    </div>
+}

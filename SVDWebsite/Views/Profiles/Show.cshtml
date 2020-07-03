@@ -1,0 +1,262 @@
+﻿@using SVD;
+@using SVDWebsite.Code;
+@model SVDWebsite.Models.ShowProfileModel
+@{
+    ViewBag.Title = Model.Vehicle.Title;
+}
+@section Head
+{
+    <link type="text/css" href="http://mpncdn.eu/svd/c/profile.css" rel="stylesheet" />
+    <link type="text/css" href="http://mpncdn.eu/svd/c/prettyPhoto.css" rel="stylesheet" />
+    @if (Model.Vehicle.TheftLatitude.HasValue && Model.Vehicle.TheftLongitude.HasValue)
+    {
+        <script type="text/javascript">
+            var markerLat = "@Model.Vehicle.TheftLatitude.Value";
+            var markerLong = "@Model.Vehicle.TheftLongitude.Value";
+        </script>
+    }
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://mpncdn.eu/svd/j/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="http://mpncdn.eu/svd/j/pages/profile.js"></script>
+    <meta property="og:title" content="@Model.Vehicle.Title" />
+    <meta property="og:site_name" content="Stolen Vehicle Database" />
+    <meta property="og:url" content="http://stolenvehicledatabase.org/profiles/@Helpers.ToUrlPart(Model.Vehicle.Title)/@Model.Vehicle.Id" />
+    <meta property="og:type" content="article" />
+    @if (Model.Vehicle.Photos.Count > 0)
+    {
+        var purl = "http://stolenvehicledatabase.org" + Helpers.DynamicImageUrl(Model.Vehicle.Photos[0], 130);
+        <meta property="og:image" content="@purl" />
+    }
+}
+
+<div class="mb10">
+    @Html.ActionLink("Vehicles", "index", "browse") / 
+    <a href="/browse/@Model.Vehicle.Model.Type.Name.ToLower()s">@Model.Vehicle.Model.Type.Name<text>s</text></a>
+</div>
+
+<h1>
+    @Model.Vehicle.Year
+    @Html.ActionLink(Model.ManufacturerName, "VehicleManufacturer", "browse", new { manufacturer = Helpers.ToUrlPart(Model.ManufacturerName) }, null)
+    @Html.ActionLink(Model.Vehicle.Model.Name, "VehicleModel", "browse", new { manufacturer = Helpers.ToUrlPart(Model.ManufacturerName), id = Model.Vehicle.Model.Id, model = Helpers.ToUrlPart(Model.Vehicle.Model.Name) }, null)  
+</h1>
+@if (Model.Vehicle.TheftLocationPlaces.Count > 0)
+{
+<div class="mt10 title">
+    Taken from: 
+    @{
+    for (var i = 0; i < Model.Vehicle.TheftLocationPlaces.Count; i++)
+    {
+        var p = Model.Vehicle.TheftLocationPlaces[i];
+            <text>@Html.ActionLink(p.Name, "show", "places", new { id = p.Id, name = Helpers.ToUrlPart(p.Name) }, null)</text>
+             if (i < Model.Vehicle.TheftLocationPlaces.Count - 1)
+             {
+                <text> / </text>
+             }
+    }
+    }
+    </div>
+}
+@if (Model.Vehicle.Status == SVD.VehicleStatus.Archived)
+{
+    <div class="notification mt10">
+        This profile has been archived! It's not publically accessible.  
+    </div>
+}
+
+<hr />
+
+<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like action="recommend" colorscheme="dark"></fb:like>
+
+<div class="floatRight">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="stolenvehicles">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</div>
+<div class="clear"></div>
+
+@if (Helpers.UserHasVehicleControlRights(Model.Vehicle))
+{
+    <div class="mt10 smaller clearBox">
+        @Html.ActionLink("Edit Details", "edit", "account", new { id = Model.Vehicle.Id }, null) | 
+        @Html.ActionLink("Change Photos & Videos", "editmedia", "account", new { id = Model.Vehicle.Id }, null) | 
+        @Html.ActionLink("Delete", "delete", "account", new { id = Model.Vehicle.Id }, null)
+    </div>
+}
+
+<div class="mt10">
+    <b>@Model.Vehicle.Description</b>
+</div>
+
+<div class="box mt10">
+
+    <div class="mb10">
+        Status:
+        <div class="title mb10">
+            @if (Model.Vehicle.Status == VehicleStatus.Active)
+            {
+                <text>Missing</text>
+            }
+            else
+            {
+                @Model.Vehicle.Status
+            }
+            
+        </div>
+    </div>
+    
+    @if (Model.Vehicle.Colour != null)
+    {
+        <div class="mb10">
+            Colour:
+            <div class="title mt5">@Model.Vehicle.Colour.Name</div>
+        </div>
+    }
+    
+    <div>
+        Registration / Plate No:
+        <div class="title mt5">@Model.Vehicle.Registration.ToUpper()</div>
+    </div>
+    
+    <div class="mt10">
+        VIN / Chassis number:
+        <div class="title mt5">
+        @if (!string.IsNullOrEmpty(Model.Vehicle.Vin))
+        {            
+            @Model.Vehicle.Vin
+        }
+        else
+        {
+            <text>-</text>
+        }        
+        </div>
+    </div>
+
+    <div class="mt10">
+        Engine number:
+        <div class="title mt5">
+        @if (!string.IsNullOrEmpty(Model.Vehicle.EngineNumber))
+        {            
+            @Model.Vehicle.EngineNumber
+        }
+        else
+        {
+            <text>-</text>
+        }        
+        </div>
+    </div>
+
+    <div class="mt10">
+        Stolen on: 
+        <div class="title mt5">@Model.Vehicle.TheftDate.Value.ToLongDateString()</div>
+    </div>
+
+    <div class="mt10">
+        Method: 
+        <div class="title mt5">@Model.Vehicle.TheftMethod.Name</div>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.Vehicle.TheftDescription))
+{
+<div class="contentBoxBottom">
+    <h3 class="mb10">Theft Information</h3>
+    @Model.Vehicle.TheftDescription
+</div>
+}
+
+<div class="contentBox mt20">
+    <h3>Police Information</h3>
+    @if (!string.IsNullOrEmpty(Model.Vehicle.PoliceForce))
+    {
+    <div class="mt10">
+        <b>Police Force:</b>
+        <div>@Model.Vehicle.PoliceForce</div>
+    </div>
+    }
+    @if (!string.IsNullOrEmpty(Model.Vehicle.PolicePhoneNumber))
+    {
+    <div class="mt10">
+        <b>Police Phone Number:</b>
+        <div>@Model.Vehicle.PolicePhoneNumber</div>
+    </div>
+    }
+    @if (!string.IsNullOrEmpty(Model.Vehicle.PoliceReference))
+    {
+    <div class="mt10">
+        <b>Police Reference:</b>
+        <div>@Model.Vehicle.PoliceReference</div>
+    </div>
+    }
+</div>
+<div class="contentBox mt20">
+    <h3 class="mb10">Security Information</h3>
+    <ul>
+    @foreach (var security in Model.Vehicle.SecurityTypes)
+    {
+        <li>@security.Name</li>
+    }
+    </ul>
+
+    @if (Model.Vehicle.SecurityTypes.Count == 0)
+    {
+        <text>
+            <img src="/content/images/icons/lock.png" alt="" width="16" height="16" />
+            This @Model.Vehicle.Model.Type.Name.ToLower() had no added security!
+        </text>
+    }
+</div>
+
+@if (Model.Vehicle.TheftLatitude.HasValue && Model.Vehicle.TheftLongitude.HasValue)
+{
+    <div class="mt10">
+        <h2>Location</h2>
+        <div class="box">
+        <div id="mapCanvas"></div>
+        </div>
+    </div>
+}
+
+@if (Model.Vehicle.Photos.Count > 0)
+{
+    <h2>Photos</h2>
+    <div class="mb10">
+        Click to zoom &raquo;
+    </div>
+
+    foreach (var i in Model.Vehicle.Photos)
+    {
+        <div class="photo">
+            @{Html.DynamicImageWithZoom(i, 200, false, 0);}
+        </div>
+    }
+}
+
+@if (Model.Vehicle.Videos.Count > 0)
+{
+    <h2>Videos</h2>
+    <div class="clear"></div>
+    foreach (var v in Model.Vehicle.Videos)
+    {
+        <div class="floatLeft pr10">
+            @{Html.YouTubeVideo(v, 430);}
+        </div>
+    }
+    <div class="clear"></div>
+}
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'stolenvehicles'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = 'http://stolenvehicledatabase.org/profiles/@Helpers.ToUrlPart(Model.Vehicle.Title)/@Model.Vehicle.Id';
+    var disqus_url = 'http://stolenvehicledatabase.org/profiles/@Helpers.ToUrlPart(Model.Vehicle.Title)/@Model.Vehicle.Id';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>

@@ -1,0 +1,9 @@
+﻿#leftBox {
+    float: left;
+    width: 65%;
+    padding-bottom: 10px;
+}
+#rightBox {
+    text-align: right;
+    float: right;
+}

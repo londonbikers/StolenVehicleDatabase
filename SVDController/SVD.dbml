@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SVD" Class="SVDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=SVD;Integrated Security=True" SettingsObjectName="SVD.Properties.Settings" SettingsPropertyName="SVDConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VehicleLocations" Member="DB_VehicleTheftLocations">
+    <Type Name="DB_VehicleTheftLocation">
+      <Column Name="VehicleID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DB_Location_DB_VehicleTheftLocation" Member="DB_Location" ThisKey="LocationID" OtherKey="ID" Type="DB_Location" IsForeignKey="true" />
+      <Association Name="DB_Vehicle_DB_VehicleTheftLocation" Member="DB_Vehicle" ThisKey="VehicleID" OtherKey="ID" Type="DB_Vehicle" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TheftMethods" Member="DB_TheftMethods">
+    <Type Name="DB_TheftMethod">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="DB_TheftMethod_DB_Vehicle" Member="DB_Vehicles" ThisKey="ID" OtherKey="TheftMethodID" Type="DB_Vehicle" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Colours" Member="DB_Colours">
+    <Type Name="DB_Colour">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="DB_Colour_DB_Vehicle" Member="DB_Vehicles" ThisKey="ID" OtherKey="ColourID" Type="DB_Vehicle" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleSecurityTypes" Member="DB_VehicleSecurityTypes">
+    <Type Name="DB_VehicleSecurityType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="DB_VehicleSecurityType_DB_VehicleSecurity" Member="DB_VehicleSecurities" ThisKey="ID" OtherKey="TypeID" Type="DB_VehicleSecurity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehiclePhotos" Member="DB_VehiclePhotos">
+    <Type Name="DB_VehiclePhoto">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VehicleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Filename" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="DateModified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PhotoType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="DB_Vehicle_DB_VehiclePhoto" Member="DB_Vehicle" ThisKey="VehicleID" OtherKey="ID" Type="DB_Vehicle" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleVideos" Member="DB_VehicleVideos">
+    <Type Name="DB_VehicleVideo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VehicleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Association Name="DB_Vehicle_DB_VehicleVideo" Member="DB_Vehicle" ThisKey="VehicleID" OtherKey="ID" Type="DB_Vehicle" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleSecurity" Member="DB_VehicleSecurities">
+    <Type Name="DB_VehicleSecurity">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VehicleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DB_VehicleSecurityType_DB_VehicleSecurity" Member="DB_VehicleSecurityType" ThisKey="TypeID" OtherKey="ID" Type="DB_VehicleSecurityType" IsForeignKey="true" />
+      <Association Name="DB_Vehicle_DB_VehicleSecurity" Member="DB_Vehicle" ThisKey="VehicleID" OtherKey="ID" Type="DB_Vehicle" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Locations" Member="DB_Locations">
+    <Type Name="DB_Location">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Latitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ParentLocationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DB_Location_DB_VehicleTheftLocation" Member="DB_VehicleTheftLocations" ThisKey="ID" OtherKey="LocationID" Type="DB_VehicleTheftLocation" />
+      <Association Name="DB_Location_DB_Location" Member="DB_Locations" ThisKey="ID" OtherKey="ParentLocationId" Type="DB_Location" />
+      <Association Name="DB_Location_DB_Location" Member="Location1" ThisKey="ParentLocationId" OtherKey="ID" Type="DB_Location" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vehicles" Member="DB_Vehicles">
+    <Type Name="DB_Vehicle">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ManufacturerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VehicleTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ColourID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Registration" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VIN" Type="System.String" DbType="Char(17)" CanBeNull="true" />
+      <Column Name="EngineNumber" Type="System.String" DbType="Char(17)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PoliceForce" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PolicePhoneNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PoliceReference" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TheftDescription" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TheftLongitude" Type="System.Decimal" DbType="Decimal(18,6)" CanBeNull="true" />
+      <Column Name="TheftLatitude" Type="System.Decimal" DbType="Decimal(18,6)" CanBeNull="true" />
+      <Column Name="IsLocationApprox" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TheftDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TheftMethodID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateModified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="DB_Vehicle_DB_VehicleTheftLocation" Member="DB_VehicleTheftLocations" ThisKey="ID" OtherKey="VehicleID" Type="DB_VehicleTheftLocation" />
+      <Association Name="DB_Vehicle_DB_VehiclePhoto" Member="DB_VehiclePhotos" ThisKey="ID" OtherKey="VehicleID" Type="DB_VehiclePhoto" />
+      <Association Name="DB_Vehicle_DB_VehicleVideo" Member="DB_VehicleVideos" ThisKey="ID" OtherKey="VehicleID" Type="DB_VehicleVideo" />
+      <Association Name="DB_Vehicle_DB_VehicleSecurity" Member="DB_VehicleSecurities" ThisKey="ID" OtherKey="VehicleID" Type="DB_VehicleSecurity" />
+      <Association Name="DB_Colour_DB_Vehicle" Member="DB_Colour" ThisKey="ColourID" OtherKey="ID" Type="DB_Colour" IsForeignKey="true" />
+      <Association Name="DB_TheftMethod_DB_Vehicle" Member="DB_TheftMethod" ThisKey="TheftMethodID" OtherKey="ID" Type="DB_TheftMethod" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetColourStatistic" Method="GetColourStatistic">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetColourStatisticResult">
+      <Column Name="ColourID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Instances" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetTheftMethodStatistic" Method="GetTheftMethodStatistic">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetTheftMethodStatisticResult">
+      <Column Name="TheftMethodID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Instances" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetManufacturerStatistic" Method="GetManufacturerStatistic">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetManufacturerStatisticResult">
+      <Column Name="ManufacturerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Instances" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetModelStatistic" Method="GetModelStatistic">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetModelStatisticResult">
+      <Column Name="ModelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Instances" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetVehicleSecurityTypeStatistic" Method="GetVehicleSecurityTypeStatistic">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetVehicleSecurityTypeStatisticResult">
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Instances" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCountryStatistic" Method="GetCountryStatistic">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetCountryStatisticResult">
+      <Column Name="LocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Instances" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetArea1Statistic" Method="GetArea1Statistic">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetArea1StatisticResult">
+      <Column Name="LocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Instances" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetArea2Statistic" Method="GetArea2Statistic">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetArea2StatisticResult">
+      <Column Name="LocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Instances" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetLocalityStatistic" Method="GetLocalityStatistic">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetLocalityStatisticResult">
+      <Column Name="LocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Instances" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRouteStatistic" Method="GetRouteStatistic">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetRouteStatisticResult">
+      <Column Name="LocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Instances" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetSubLocalityStatistic" Method="GetSubLocalityStatistic">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetSubLocalityStatisticResult">
+      <Column Name="LocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Instances" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

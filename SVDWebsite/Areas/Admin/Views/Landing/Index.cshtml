@@ -1,0 +1,52 @@
+﻿@using SVDWebsite.Code;
+@using Webdiyer.WebControls.Mvc
+@model SVDWebsite.Areas.Admin.Models.LandingModel
+@{
+    ViewBag.Title = "SVD: Admin";
+}
+<h2>Latest Vehicles</h2>
+
+<div class="mb10">
+    @Html.Pager(Model.Vehicles, new PagerOptions{PageIndexParameterName="page"})
+</div>
+
+@foreach (var v in Model.Vehicles)
+{
+    <div class="mb10">
+        <div class="floatLeft pr10">
+            @{
+                if (v.Photos.Count > 0)
+                {
+                    var href = Url.Action("show", "profiles", new { area = "", name = Helpers.ToUrlPart(v.Title), id = v.Id }, "http");
+                    Html.DynamicImageLink(href, v.Photos[0], 100, true);
+                }
+                else
+                {
+                    <img src="/content/images/question-mark-100.gif" alt="" />
+                }
+            }
+        </div>
+        <div class="big">
+            @Html.ActionLink(v.Title, "show", "profiles", new { area = "", name = Helpers.ToUrlPart(v.Title), id = v.Id }, null)
+        </div>
+        <div><b>Type:</b> @v.Model.Type.Name</div>
+        <div><b>Date stolen:</b> @v.TheftDate.Value.ToLongDateString()</div>
+        @if (v.TheftLocationPlaces.Count > 0)
+        {
+            var country = v.TheftLocationPlaces.Single(q => q.Type == SVD.PlaceType.Country);
+            <div>
+                <b>Country:</b>
+                @Html.ActionLink(country.Name, "show", "places", new { area = "", id = country.Id, name = Helpers.ToUrlPart(country.Name) }, null)
+            </div>
+        }
+        <b>Edit:</b>
+        @Html.ActionLink("Details", "edit", "account", new { area = "", id = v.Id }, null)
+        <text>|</text>
+        @Html.ActionLink("Photos & Videos", "editmedia", "account", new { area = "", id = v.Id }, null)
+        <text>|</text>
+        @Html.ActionLink("Delete", "delete", "account", new { area = "", id = v.Id }, null)
+        <div class="clear"></div>
+    </div>
+}
+
+@Html.Pager(Model.Vehicles, new PagerOptions{PageIndexParameterName="page"})

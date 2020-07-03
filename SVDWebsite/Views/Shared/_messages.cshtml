@@ -1,0 +1,8 @@
+﻿@using SVDWebsite.Code;
+@{
+    var message = Helpers.RenderPageMessage();
+    if (message != null)
+    {
+        <div id="message">@message.Value</div>
+    }   
+}

@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Classes for VDWS communication">
+    <Position X="8.746" Y="1" Height="0.469" Width="2.7" />
+  </Comment>
+  <Comment CommentText="Linq2Sql classes and data-context.">
+    <Position X="30.25" Y="1" Height="0.291" Width="2.145" />
+  </Comment>
+  <Comment CommentText="Domain Models">
+    <Position X="10.75" Y="10" Height="0.469" Width="2.7" />
+  </Comment>
+  <Comment CommentText="Application Layer">
+    <Position X="26" Y="10.75" Height="0.469" Width="2.536" />
+  </Comment>
+  <Comment CommentText="Background processes">
+    <Position X="35.968" Y="11.559" Height="0.404" Width="1.809" />
+  </Comment>
+  <Class Name="SVD.Background_Tasks.PlacesStatsProcessor" Collapsed="true">
+    <Position X="36" Y="12.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Background Tasks\PlacesStatsProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.CacheManager" Collapsed="true">
+    <Position X="26.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAgAIAAAABAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CacheManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.Repository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiBQgAJWAACADQRAAAAIMAIQBQAQFEAIQhAUARBEAIA=</HashCode>
+      <FileName>Repository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.SVDDataContext" Collapsed="true">
+    <Position X="30.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAUgIAASAwAABQAABAUBAASlAGAgJAAgCBMkFAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.DB_VehicleTheftLocation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="34.5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQABKAAQAABBQAEgAAABiCABgAAAAAAAEAgAAAI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.DB_TheftMethod" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAQABAAAAgAAAQAEEIAQBiCAASAAAABAgAAAEAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.DB_Colour" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAQABAAAAgAAAQAEEIAQBiCAASAAAABAgAAAEAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.DB_VehicleSecurityType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAgBAAAAgAAAQAEEIAQBnCAAUAAAABAAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.DB_VehiclePhoto" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgAQgFJAQAwAACQAEkAAQBiSCBogQCABAUEAAEAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.DB_VehicleVideo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAgCQgFIAAAgAAAQAEkAAABiCABgAAACBAQEAAEAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.DB_VehicleSecurity" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.25" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAgAQBBIAAAgAAAQEEkAAABiLABgAAgABAAEAAEAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.DB_Location" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAiAAADhsAAgAlAQAMsYAWBqCAAUBggARAAABgkBAg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.DB_Vehicle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQVgwB6VBBFgwY14WgOFUhYlvSiQsVEmMbd1tAsEGkk=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.Controller" Collapsed="true">
+    <Position X="26.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEAAIAQADAgQAAAAAAAEAAAAgAAAAEQAAAAACAAQA=</HashCode>
+      <FileName>SVDController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.Controllers.MakesAndModelsController" Collapsed="true">
+    <Position X="26.25" Y="12.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACCAAAAAAAAAAAAACIAAAAIAAAAAAACEAA=</HashCode>
+      <FileName>Controllers\MakesAndModelsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.Controllers.PlacesController" Collapsed="true">
+    <Position X="24" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Controllers\PlacesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.Controllers.VehicleController" Collapsed="true">
+    <Position X="29.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIQAAJEAACABSBAAAAIMAIQBQAQFEAAAgACABBAAIA=</HashCode>
+      <FileName>Controllers\VehicleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.Models.BaseModel" Collapsed="true">
+    <Position X="11.25" Y="12.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAABAAAAAggAAQAAAAAAAAAAQCEAAAAACA=</HashCode>
+      <FileName>Models\BaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.Models.Colour" Collapsed="true">
+    <Position X="4.5" Y="13.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Colour.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SVD.Models.LightVehicleCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="15" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABAABCAAABAQAAAAAAEAEQAAAAABQAAA=</HashCode>
+      <FileName>Models\LightVehicleCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.Models.Photo" Collapsed="true">
+    <Position X="9" Y="13.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAARAAAAAgAAAAABAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Photo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.Models.Place" Collapsed="true">
+    <Position X="11.25" Y="13.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEIAAEAEAAAQAAAAwoIAQAAIAAEAAAAQAAABAAAAA=</HashCode>
+      <FileName>Models\Place.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.Models.TheftMethod" Collapsed="true">
+    <Position X="13.5" Y="13.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TheftMethod.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SVD.Models.Vehicle" Collapsed="true">
+    <Position X="15.75" Y="13.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IIBhIAAUBAAgQmAQApgBAAAAgAIgRAAAQChAQBAEAAk=</HashCode>
+      <FileName>Models\Vehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.Models.VehicleSecurityType" Collapsed="true">
+    <Position X="18" Y="13.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\VehicleSecurityType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SVD.Models.Video" Collapsed="true">
+    <Position X="6.75" Y="13.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAgAAAAABAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\Video.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.Properties.Settings">
+    <Position X="32.75" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAQBAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.ResponseBase" Collapsed="true">
+    <Position X="14.5" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAACAAAAAAAAAAAAAAAAgAAAAAAEACAAAAIAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SVD.VDWS.GetVehicleManufacturersResponse" Collapsed="true">
+    <Position X="6" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAEAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.GetVehicleManufacturerResponse" Collapsed="true">
+    <Position X="11" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAEAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.GetVehicleModelResponse" Collapsed="true">
+    <Position X="9" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAEAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.GetVehicleModelsByManufacturerResponse" Collapsed="true">
+    <Position X="6.25" Y="6.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAEAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.GetVehicleModelsByManufacturerIdResponse" Collapsed="true">
+    <Position X="2" Y="6.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.UpdateVehicleTypeResponse" Collapsed="true">
+    <Position X="5.5" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.UpdateVehicleManufacturerResponse" Collapsed="true">
+    <Position X="8.25" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.UpdateVehicleModelResponse" Collapsed="true">
+    <Position X="11.5" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.UpdateClientResponse" Collapsed="true">
+    <Position X="8.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.DeleteVehicleTypeResponse" Collapsed="true">
+    <Position X="5.75" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.DeleteVehicleModelResponse" Collapsed="true">
+    <Position X="11.25" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.DeleteClientResponse" Collapsed="true">
+    <Position X="10" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.GetVehicleTypesResponse" Collapsed="true">
+    <Position X="12" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAEAAAABAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.VehicleType" Collapsed="true">
+    <Position X="18" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.VehicleManufacturer" Collapsed="true">
+    <Position X="18" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAIAEAAgCAAAAAAAAQAAAAAAAAAAAgAAAAAAIA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.VdBase" Collapsed="true">
+    <Position X="16.75" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACABACAAAAAAAAAAAAAAAEgAAAAAAEAAAgAAIAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SVD.VDWS.VehicleModel" Collapsed="true">
+    <Position X="18" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIAAAgAgKAAAABAQAQAAIEAIAAAAQAAAIAACIA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.Client" Collapsed="true">
+    <Position X="18" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgEAAAAAAAAQAAAABAAACAAAAAAAACAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SVD.VDWS.VdServiceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACEAAAAAIAAAAAAAAAAgAgAgEAQAIEAABAAAAgBQ=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SVD.Models.Statistic" Collapsed="true">
+    <Position X="14" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Statistic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SVD.Models.Coordinates" Collapsed="true">
+    <Position X="12.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Coordinates.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="SVD.IRepository" Collapsed="true">
+    <Position X="30.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiBQAABWAACADQRAAAAIMAIQBQAAFEAIQhAUARBEAIA=</HashCode>
+      <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SVD.Interfaces.INamable" Collapsed="true">
+    <Position X="14.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\INamable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SVD.VDWS.IVdService" Collapsed="true">
+    <Position X="20.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACEAAAAAIAAAAAAAAAAgAgAgEAQAIEAABAAAAgBQ=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SVD.VDWS.IVdServiceChannel" Collapsed="true">
+    <Position X="20.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SVD.ObjectMode" Collapsed="true">
+    <Position X="10.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SVD.PhotoType" Collapsed="true">
+    <Position X="12.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SVD.VehicleStatus" Collapsed="true">
+    <Position X="11.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SVD.PlaceType" Collapsed="true">
+    <Position X="14.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAkAAAAAAgAIAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SVD.VDWS.GetOperationResultType" Collapsed="true">
+    <Position X="8.5" Y="10.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAgAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SVD.VDWS.UpdateOperationResultType" Collapsed="true">
+    <Position X="8.75" Y="11.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SVD.VDWS.DeleteOperationResultType" Collapsed="true">
+    <Position X="13" Y="11.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAIAAAAgAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\VDWS\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

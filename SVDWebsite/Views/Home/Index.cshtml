@@ -1,0 +1,94 @@
+﻿@{      
+    ViewBag.Title = "Stolen Vehicle Database";
+}
+@section Head
+{
+    <link type="text/css" href="http://mpncdn.eu/svd/c/home.css" rel="stylesheet" />
+}
+<div class="content">
+    <h2>@ViewBag.Message</h2>
+    <div class="clear"></div>
+
+    <div id="leftBox">
+        <div class="highlightBox mb10 title">
+            <b><a href="/about/helpus">We need your help!</a></b> - Join us!
+        </div>
+        <div class="highlightBox mb10">
+            Our mission is to help reduce vehicle theft. We don't believe all is being done that could be done and we want to empower the people that are trying. It's that simple. We believe there's two ways this can be done.
+            | <a href="/about/reasoning">read more</a>
+            <ol class="spaced">
+                <li><b class="smalltitle">Educate</b> people on what exactly is being stolen, where and how. We want to know what security products are worth our money, what locations are the worst to park in and with that information we can cut through the rubbish and see what is, and isn't working.</li>
+                <li><b class="smalltitle">Empower</b> those campaigning on our behalf for better security, better theft-prevention, better policing and better vehicles/products. The way we can help here is to provide detailed information that they can use and will know is accurate. Perhaps you will want to get involved after seeing the data as well.</li>
+            </ol>
+        </div>
+        <div class="highlightBox2">
+            <h3>Things to do:</h3>
+            <p>
+                @Html.ActionLink("Sign-up", "register", "account") and @Html.ActionLink("add your stolen vehicle", "index", "addvehicle")!
+            </p>
+            <h4 class="mt20">See the latest vehicles:</h4>
+            <ul>
+                <li><a href="/browse/motorcycles">Motorcycles</a></li>
+            </ul>
+        </div>
+        
+        <hr class="light" />
+        <div class="mt10">
+            <h3>We've just launched!</h3> 
+            <p>
+                Please <a href="mailto:contact@stolenvehicledatabase.org">let us know</a> if anything's not working! We'll be updating the site frequently.
+            </p>
+            <p>
+                We've got a lot planned for SVD. The site is still very young, so please
+                bear with us. Things coming are:
+            </p>
+            <ul>
+                <li>Browse everything; manufacturers, models, places, security methods, etc.</li>
+                <li>Reports &amp; statistics on everything. See what is and isn't working.</li>
+                <li>An API to get access to the data.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="rightBox">
+        <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/pages/The-Stolen-Vehicle-Database/118916611515009" width="292" show_faces="true" stream="false" header="true" colorscheme="dark"></fb:like-box>
+        <div class="mt10">
+            <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+            <script>
+                new TWTR.Widget({
+                    version: 2,
+                    type: 'search',
+                    search: '@@stolenvehicles OR #stolenvehicledatabase',
+                    interval: 6000,
+                    title: 'The Stolen Vehicle Database',
+                    subject: '',
+                    width: 292,
+                    height: 300,
+                    theme: {
+                        shell: {
+                            background: '#333333',
+                            color: '#ffffff'
+                        },
+                        tweets: {
+                            background: '#000000',
+                            color: '#444444',
+                            links: '#1986b5'
+                        }
+                    },
+                    features: {
+                        scrollbar: false,
+                        loop: true,
+                        live: true,
+                        hashtags: true,
+                        timestamp: true,
+                        avatars: true,
+                        toptweets: true,
+                        behavior: 'default'
+                    }
+                }).render().start();
+            </script>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</div>

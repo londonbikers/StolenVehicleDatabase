@@ -1,0 +1,3 @@
+﻿/*ALTER TABLE [dbo].[Models]
+    ADD CONSTRAINT [FK_Models_Makes] FOREIGN KEY ([MakeID]) REFERENCES [dbo].[Makes] ([ID]) ON DELETE NO ACTION ON UPDATE NO ACTION;*/
+

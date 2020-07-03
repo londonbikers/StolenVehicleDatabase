@@ -1,0 +1,69 @@
+﻿@model SVDWebsite.Models.StageTwo
+@using SVDWebsite.Code;
+@{
+    ViewBag.Title = @Model.Type + ": " + Model.Title;
+}
+@section Head
+{
+    <link type="text/css" href="http://mpncdn.eu/svd/c/stagetwo.css" rel="stylesheet" />
+    <link type="text/css" href="http://mpncdn.eu/svd/c/fileuploader.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://mpncdn.eu/svd/j/pages/stagetwo.js"></script>
+    <script type="text/javascript">
+        var vid = @Model.Id;
+		var videoUrls = @Html.Raw(Model.VideoArray);
+    </script>
+    <script type="text/javascript" src="http://mpncdn.eu/svd/j/fileuploader.js"></script>
+}
+<h1><span class="faint">@Model.Type:</span> @Model.Title</h1>
+<h2>Got it!</h2>
+<div class="box squash">
+    <p>
+        Your @Model.Type.ToLower()'s listed now. You can @Html.ActionLink("edit", "edit", "account", new {Id = Model.Id}, null) the details at any time from your @Html.ActionLink("account", "index", "account") page. <br />
+        Your @Model.Type.ToLower() now has a @Html.ActionLink("profile page", "show", "profiles", new {name = Helpers.ToUrlPart(Model.Title), id = Model.Id}, null) where everyone can see it.
+    </p>
+    <p>
+        We recommend you add some photos now so people can identify your @Model.Type.ToLower(). Supply a few, both of it as a whole and any details that
+		can uniquely identify it. You can also include videos you may have from YouTube.
+    </p>
+</div>
+
+@using (Html.BeginForm())
+{
+    <h2>Photos</h2>
+    <div class="box">
+         <div id="fileUploader">		
+		    <noscript>			
+			    <p>Please enable JavaScript to use file uploader.</p>
+			    <!-- or put a simple form for upload here -->
+		    </noscript>         
+	    </div>
+        <span class="bigBoxFaint">drag some photos here!</span>
+    </div>
+    <div class="fieldBoxBottom">
+        <span class="smalltitle"><b>10mb max per photo!</b></span> - Drag some photos of your @Model.Type.ToLower() into the box above and we'll add them to your vehicle profile.
+    </div>
+
+    <div id="photos">
+        @foreach (var i in Model.Photos)
+        {
+            <div class="photocard" id="pc-@i.Id">
+                @{Html.DynamicImage(i, 207, true);}
+                <div class="pclabel"><a href="javascript:RemovePhoto(@i.Id);"><img src="http://mpncdn.eu/svd/c/images/icons/delete.png" alt="" /> Remove</a></div>
+            </div>
+        }
+    </div>
+
+    <h2>Videos</h2>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.YouTubeVideoUrl):
+    </div>
+    <div class="box mt10">
+        @Html.TextBoxFor(m => m.YouTubeVideoUrl) <input id="addVideoBtn" type="button" value="add video" />
+    </div>
+    <div class="fieldBoxBottom">
+        If you have any videos of your @Model.Type.ToLower() on YouTube (put some on now!) then you can have them shown on your @Model.Type.ToLower() profile here. 
+        Just enter the address of the YouTube video above and we'll grab it.
+    </div>
+
+    <div id="videos"></div>
+}
