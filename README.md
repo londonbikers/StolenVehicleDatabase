@@ -12,3 +12,7 @@ Early design, we changed later to a black theme with new branding that was kindl
 Newer logo:
 
 <img src="https://londonbikersarchive.blob.core.windows.net/github/svd.png" width="500" />
+
+Early mock of black theme:
+
+<img src="https://londonbikersarchive.blob.core.windows.net/github/svd%203%20mock.png" width="500" />
